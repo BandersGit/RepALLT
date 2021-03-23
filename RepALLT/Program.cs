@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RepALLT
 {
@@ -10,12 +11,19 @@ namespace RepALLT
             x Klasser och instanser
             x Metoder i klasser + algoritmer
             x Synlighet (public/private)
-            - Arv
-            - Genersika Klasser
-            - "Objektorientering"
-            + Inkapsling
-            + Polymorfism
+            x Arv
+            x Genersika Klasser
+            x "Objektorientering"
+            x Inkapsling
+            x Polymorfism
             */
+
+            List<int> stuff = new List<int>();
+
+            Queue<int> que = new Queue<int>();
+
+            que.Enqueue(77);
+            int next = que.Dequeue();
 
             int heroHp = 100;
             int heroX = 400;
@@ -23,11 +31,23 @@ namespace RepALLT
 
             Hero theHero = new Hero();
             Hero anotherHero = theHero;
-            
-            anotherHero.hp = 1000;
-            theHero.hp = 900;
 
-            Console.WriteLine(anotherHero.hp);
+
+
+            StrongHero hulk = new StrongHero();
+
+            hulk.Run();
+
+            hulk.Hp = -60;
+
+            
+
+            
+
+            //anotherHero.hp = 1000;
+            //theHero.hp = 900;
+
+            Console.WriteLine(hulk.Hp);
             Console.ReadLine();
         }
     }
